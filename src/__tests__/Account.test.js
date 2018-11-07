@@ -21,4 +21,15 @@ describe('Account', () => {
       expect(acc.getBalance()).toEqual(47)
     })
   })
+
+  describe('#withdraw', () => {
+    beforeEach(() => {
+      acc.deposit(100)
+    })
+
+    it('Subtracts the witdrawn amount from balance', () => {
+      acc.withdraw(20)
+      expect(acc.getBalance()).toEqual(80)
+    })
+  })
 })
