@@ -31,5 +31,15 @@ describe('Account', () => {
       acc.withdraw(20)
       expect(acc.getBalance()).toEqual(80)
     })
+
+    it('Throws an error if amount > balance', () => {
+      expect(() => { acc.withdraw(1000) }).toThrow('Amount: 1000, is greater than balance: 100')
+    })
+  })
+
+  describe('ErrorTest', () => {
+    it('Is an ErrorTEst', () => {
+      expect(() => {acc.testError()}).toThrow()
+    })
   })
 })

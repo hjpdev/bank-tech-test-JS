@@ -12,6 +12,14 @@ export default class Account {
   }
 
   withdraw(amount) {
-    this.balance -= amount
+    if(amount > this.getBalance()) { 
+        throw new Error(`Amount: ${amount}, is greater than balance: ${this.getBalance()}`)
+    } else {
+      this.balance -= amount
+    }
+  }
+
+  testError() {
+    throw new Error("Errorff")
   }
 }
