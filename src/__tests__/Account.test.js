@@ -11,7 +11,7 @@ describe('Account', () => {
   })
 
   it('Can be created with money deposited', () => {
-    acc2 = new Account(54)
+    let acc2 = new Account(54)
     expect(acc2.getBalance()).toEqual(54)
   })
 })
