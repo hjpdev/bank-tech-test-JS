@@ -18,8 +18,4 @@ export default class Account {
       this.balance -= amount
     }
   }
-
-  testError() {
-    throw new Error("Errorff")
-  }
 }
